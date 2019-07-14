@@ -6,7 +6,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        Hello. This is a form test for Netlify because it's broken on my portfolio!
+        Hello. This is a form test for Netlify because it's broken on my
+        portfolio!
         <section className="contact" id="contact">
           <h1 className="title">Contact</h1>
           <p>Have a question or just want to say hi?</p>
@@ -32,6 +33,35 @@ function App() {
             </div>
           </form>
         </section>
+        <form name="contact" method="POST" data-netlify="true">
+          <p>
+            <label>
+              Your Name: <input type="text" name="name" />
+            </label>
+          </p>
+          <p>
+            <label>
+              Your Email: <input type="email" name="email" />
+            </label>
+          </p>
+          <p>
+            <label>
+              Your Role:{" "}
+              <select name="role[]" multiple>
+                <option value="leader">Leader</option>
+                <option value="follower">Follower</option>
+              </select>
+            </label>
+          </p>
+          <p>
+            <label>
+              Message: <textarea name="message" />
+            </label>
+          </p>
+          <p>
+            <button type="submit">Send</button>
+          </p>
+        </form>
       </header>
     </div>
   );
